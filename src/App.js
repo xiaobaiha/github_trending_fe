@@ -77,15 +77,13 @@ class App extends React.Component {
   }
 
   handleIntervalChange = interval => {
-    // const { date } = this.state;
-    // const newDate = this.calculateDate(interval, date);
     this.setState({ interval }, _ => {
       this.fetchData();
     });
   }
 
   render() {
-    const { interval, articles } = this.state;
+    const { interval, articles, date } = this.state;
     const Picker = intervalMap[interval].component;
     return (
       <>
@@ -100,6 +98,7 @@ class App extends React.Component {
                 <Picker
                   disabledDate={this.disabledDate}
                   onChange={this.handleDateChange}
+                  defaultValue={date}
                 />
               </div>
               <div
