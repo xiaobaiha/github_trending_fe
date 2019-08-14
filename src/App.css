@@ -1,1 +1,22 @@
 @import '~antd/dist/antd.css';
+
+@media (max-width: 767px) {
+  .Box-header nav.subnav {
+    display: flex;
+    justify-content: center;
+  }
+  .Box-header nav.subnav span{
+    text-align: center;
+    width: 90%;
+  }
+  .date-picker {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

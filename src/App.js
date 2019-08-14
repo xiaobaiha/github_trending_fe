@@ -94,7 +94,7 @@ class App extends React.Component {
                 <span className="js-selected-navigation-item selected subnav-item" aria-current="page"
                   data-selected-links="trending_repositories /trending">Repositories</span>
               </nav>
-              <div>
+              <div className="date-picker">
                 <Picker
                   disabledDate={this.disabledDate}
                   onChange={this.handleDateChange}
@@ -102,7 +102,7 @@ class App extends React.Component {
                 />
               </div>
               <div
-                className="d-sm-flex flex-items-center flex-md-justify-end mt-3 mt-md-0 table-list-header-toggle ml-n2 ml-md-0">
+                className="select-container d-sm-flex flex-items-center flex-md-justify-end mt-3 mt-md-0 table-list-header-toggle ml-n2 ml-md-0">
                 <div className="mb-3 mb-sm-0">
                   <span style={{ display: 'inline-block', margin: '0 10px' }}>Language:</span>
                   <Select
@@ -128,7 +128,7 @@ class App extends React.Component {
                     defaultValue="daily"
                     dropdownMatchSelectWidth={false}
                     onChange={this.handleIntervalChange}
-                    style={{ width: 120 }}>
+                    style={{ width: 150 }}>
                     <Select.Option value="daily">Daily</Select.Option>
                     <Select.Option value="weekly">Weekly</Select.Option>
                     <Select.Option value="monthly">Monthly</Select.Option>
