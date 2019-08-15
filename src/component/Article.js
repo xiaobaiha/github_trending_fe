@@ -10,13 +10,13 @@ class Article extends React.Component {
       <article className="Box-row">
         <div className="float-right">
           <div className="js-toggler-container js-social-container starring-container ">
-            <form className="starred js-social-form" action="/datawhalechina/leeml-notes/unstar"
+            <form className="starred js-social-form" action={`/${author}/${pro}/unstar`}
               acceptCharset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input
                 type="hidden" name="authenticity_token"
                 value="I4AQ2zoMRPkO3XfgMSfqgFfQ/UjDl4TEJymUgNLZSvYPjyAxi4OT1EvcZdo53VjATENqCtzGBD7h/z1k1pMEow==" />
               <input type="hidden" name="context" value="trending"></input>
               <button type="submit" className="btn btn-sm  js-toggler-target" aria-label="Unstar this repository"
-                title="Unstar datawhalechina/leeml-notes"
+                title={`Unstar ${author}/${pro}`}
                 data-ga-click="Repository, click unstar button, action:trending#index; text:Unstar"> <svg
                   className="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14"
                   height="16" aria-hidden="true">
@@ -24,13 +24,13 @@ class Article extends React.Component {
                     d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z" /></svg>
                 Unstar
               </button></form>
-            <form className="unstarred js-social-form" action="/datawhalechina/leeml-notes/star"
+            <form className="unstarred js-social-form" action={`/${author}/${pro}/star`}
               acceptCharset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input
                 type="hidden" name="authenticity_token"
                 value="U/nl3fs8LKzG8XSDyPlg18detN9IANzVFChTQd3mCqRhx/mMBcvFNz3/Lp0y6FmC6sn6X0zuU3Yqi3piXzK1rg==" />
               <input type="hidden" name="context" value="trending"></input>
               <button type="submit" className="btn btn-sm  js-toggler-target" aria-label="Unstar this repository"
-                title="Star datawhalechina/leeml-notes"
+                title={`Star ${author}/${pro}`}
                 data-ga-click="Repository, click star button, action:trending#index; text:Star"> <svg
                   className="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14"
                   height="16" aria-hidden="true">
@@ -43,7 +43,7 @@ class Article extends React.Component {
         </div>
 
         <h1 className="h3 lh-condensed">
-          <a href="https://github.com/datawhalechina/leeml-notes">
+          <a href={link}>
             <svg className="octicon octicon-repo text-gray mr-1" viewBox="0 0 12 16" version="1.1" width="12"
               height="16" aria-hidden="true">
               <path fillRule="evenodd"
@@ -61,7 +61,7 @@ class Article extends React.Component {
             <span className="repo-language-color" style={{backgroundColor: color}}></span>
             <span itemProp="programmingLanguage">{language}</span>
           </span>
-          <a className="muted-link d-inline-block mr-3" href="https://github.com/datawhalechina/leeml-notes/stargazers">
+          <a className="muted-link d-inline-block mr-3" href={`${link}/stargazers`}>
             <svg aria-label="star" className="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14"
               height="16" role="img">
               <path fillRule="evenodd"
@@ -69,7 +69,7 @@ class Article extends React.Component {
             {star}
           </a>
 
-          <a className="muted-link d-inline-block mr-3" href="https://github.com/datawhalechina/leeml-notes/network/members">
+          <a className="muted-link d-inline-block mr-3" href={`${link}/network/members`}>
             <svg aria-label="fork" className="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1"
               width="10" height="16" role="img">
               <path fillRule="evenodd"
