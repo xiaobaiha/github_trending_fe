@@ -1,4 +1,5 @@
-const API = `http://104.168.234.244:5017/`;
+// const API = `http://104.168.234.244:5017/`;
+const API = `http://localhost:5017/`;
 
 export const post = data => {
   return fetch(API + 'trending', {
